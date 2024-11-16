@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+    <div class="login-background"></div>
+    <div class="login-container">
+        <h2>Bienvenido</h2>
+
+        <!-- Mostrar el mensaje de error si está presente -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="error-message">
+              {% for category, message in messages %}
+                {% if category == 'error' %}
+                  <p style="color: red;">{{ message }}</p>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form action="/login" method="post">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required>
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <button type="submit">INICIAR SESIÓN</button>
+        </form>
+        <div class="crear-cuenta">
+            ¿No tienes cuenta?<br>
+            <a href="crear_cuenta.html">Crear cuenta</a>
+        </div>
+    </div>
+</body>
+</html>

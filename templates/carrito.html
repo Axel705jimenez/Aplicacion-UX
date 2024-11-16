@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="user-cart">
+                <button id="regresar-btn" class="regresar-btn" onclick="window.location.href='/index';">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+            </div>
+            
+            
+            <span class="user-icon" id="user-icon">👤 Usuario</span>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul>
+                    <li>Mi cuenta</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar collapsed">
+        <ul>
+            <li>Inicio</li>
+            <li>Moda</li>
+            <li>Hogar</li>
+            <li>Electrónica</li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <div class="cart-container">
+            <div class="cart-left">
+                <br>
+                <center>
+                    <h1>Carrito</h1>
+                </center>
+                <h2>Productos</h2>
+                <ul class="product-list">
+                    <li class="product-item">
+                        <div class="product-info">
+                            <img class="product-image" src="https://via.placeholder.com/100" alt="Producto">
+                            <div class="product-details">
+                                <div class="product-title">Chamarra especial greenlander impermeable con capucha</div>
+                                <br>
+                                <a href="#">Eliminar</a>
+                                <br>
+                                <br>
+                                <label for="quantity">Cantidad:</label>
+                                <select id="quantity" name="quantity">
+                                    <option value="1">1 Unidad</option>
+                                    <option value="2">2 Unidades</option>
+                                    <option value="3">3 Unidades</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="product-price">$1,199</div>
+                    </li>
+                </ul>
+    
+                <div class="total-section">
+                    <span>Envío</span>
+                    <span>$150</span>
+                </div>
+                <div class="total-sec">
+                    <span>Total</span>
+                    <span>$1,349</span>
+                </div>
+                <button class="pay-button">Realizar pago</button>
+            </div>
+    
+            <div class="cart-right">
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    </div>
+    
+</body>
+</html>

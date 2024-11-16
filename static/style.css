@@ -1,0 +1,373 @@
+body {
+    background-image: url('/static/Images/Background.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-body {
+    background-image: url('/static/Images/fondo.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #EAEAEA;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    z-index: 1;
+}
+
+.login-container h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-container label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #DCDCDC;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #509AFE;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #1d1d66;
+}
+
+.login-container .crear-cuenta {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.login-container .crear-cuenta a {
+    color: #2F2F89;
+    text-decoration: none;
+}
+
+.login-container .crear-cuenta a:hover {
+    text-decoration: underline;
+}
+
+.login-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 395px;
+    height: 345px;
+    background-color: #F0F0F0;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #2F2F89;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: left 0.3s;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.user-cart {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    position: relative;
+}
+
+.user-icon, .cart-icon {
+    margin-right: 20px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #696969;
+    color: white;
+    padding-top: 80px;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s;
+    transform: translateX(-100%);
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.sidebar:not(.collapsed) {
+    transform: translateX(0);
+}
+
+.main-content {
+    background-color: white;
+    width: 92%;
+    max-width: 1090px;
+    padding: 20px;
+    margin: 0 auto;
+    flex-grow: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    margin-left: 50px;
+    padding: 100px 0 0;
+    max-width: 1200px;
+    transition: margin-left 0.3s;
+}
+
+.sidebar.collapsed + main {
+    margin-left: 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: #696969;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 215px;
+    z-index: 2;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product .price {
+    color: green;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.product .rating {
+    margin-top: 5px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+ .cart-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-left: 3%;
+    height: 100%; 
+}
+
+.cart-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 0%;
+}
+
+.cart-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding: 20px;
+    width: 0px; 
+}
+
+
+.pay-button {
+    width: 13%;
+    position: absolute; 
+    bottom: 38px; 
+    right: 250px; 
+    padding: 10px 20px;
+    background-color: #C2F1C8;
+    color: rgb(0, 0, 0);
+    border-color: black;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+
+footer {
+    background-color: #2F2F89;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+}
+
+.product-info {
+    width: 100%;
+    right: 0px; 
+    display: flex;
+}
+
+.product-image {
+    width: 100px; 
+    height: auto;
+    margin-right: 20px; 
+    margin-left: 0px; 
+
+}
+
+.product-details {
+    flex-grow: 1; 
+}
+
+.product-price {
+    font-weight: bold;
+    margin-left: 930px;    
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid black; 
+    border-top: 1px solid black;  
+
+
+}
+.product-list {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.total-sec{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-top: 250px;
+    font-weight: bold;
+    border-top: 1px solid black;  
+
+}
+
+.regresar-btn {
+    background: none;
+    border: none;
+    font-size: 24px; 
+    color: white; 
+    cursor: pointer;
+}
