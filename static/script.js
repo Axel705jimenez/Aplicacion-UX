@@ -5,15 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     menuButton.addEventListener('click', function() {
         sidebar.classList.toggle('collapsed');
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     const userIcon = document.getElementById('user-icon');
     const dropdownMenu = document.getElementById('dropdown-menu');
 
     userIcon.addEventListener('click', function(event) {
         dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        event.stopPropagation(); 
+        event.stopPropagation();
     });
 
     document.addEventListener('click', function(event) {
@@ -21,15 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdownMenu.style.display = 'none';
         }
     });
-});
 
-const cartButton = document.getElementById('cart-icon');
+    window.onload = function() {
+        const productBElements = document.querySelectorAll('.product-b');
+        console.log('Elementos encontrados con la clase .product-b:', productBElements);
 
-cartButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    const userResponse = confirm("¿Desea iniciar sesión para continuar?");
+        productBElements.forEach((element) => {
+            element.addEventListener('click', function() {
+                console.log('Elemento clickeado');
+                window.location.href = 'saldo.html';  // Redirige a saldo.html
+            });
+        });
+    };
     
-    if (userResponse) {
-        window.location.href = "/IniciarSesion";
-    }
-});
+})    

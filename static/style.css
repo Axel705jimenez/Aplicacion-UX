@@ -277,7 +277,6 @@ html, body {
     justify-content: space-between;
     padding: 20px;
     border-right: 1px solid #ddd;
-    height: 0%;
 }
 
 .cart-right {
@@ -301,10 +300,6 @@ html, body {
     cursor: pointer;
     margin-top: 10px;
 }
-
-
-
-
 
 footer {
     background-color: #2F2F89;
@@ -332,6 +327,15 @@ footer {
 
 .product-details {
     flex-grow: 1; 
+}
+
+.product-b {
+    flex-grow: 1; 
+    margin-left: 100px;
+    border: 2px solid #000000;
+    padding: 25px;            
+    margin: 40px;   
+    pointer-events: all; 
 }
 
 .product-price {
@@ -370,4 +374,24 @@ footer {
     font-size: 24px; 
     color: white; 
     cursor: pointer;
+}
+
+.dropdown-menu a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+}
+
+.dropdown-menu a:hover {
+    color: rgb(255, 255, 255); 
+    text-decoration: underline; 
+}
+
+.cant {
+    color: rgb(3, 206, 0); 
+    font-size: 24px; 
+}
+
+.canto {
+    color: rgb(0, 0, 0); 
+    font-weight: bold;
 }
