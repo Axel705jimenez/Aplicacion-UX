@@ -56,6 +56,14 @@
                         </div>
                     </li>
                 </ul>
+                <div class="btn-container">
+                    <button id="btnHistorial" class="btn-historial" onclick="window.location.href='/HistorialCompras';">
+                        <img src="{{ url_for('static', filename='images/btnHistorial.png') }}" alt="Ver Historial">
+                    
+                    <button id="btnHistorial" class="btn-aumento" onclick="window.location.href='/aumento';">
+                        <img src="{{ url_for('static', filename='images/btnaumento.png') }}" alt="btn-aumento">
+                    </button>                   
+                </div>
             </div>
         </div>
     </div>
@@ -67,7 +75,7 @@
             productBElements.forEach((element) => {
                 element.addEventListener('click', function() {
                     console.log('Elemento clickeado');
-                    window.location.href = 'saldo.html';  // Redirige a saldo.html
+                    window.location.href = '/saldo';  
                 });
             });
         };

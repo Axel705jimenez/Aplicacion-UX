@@ -301,6 +301,20 @@ html, body {
     margin-top: 10px;
 }
 
+.pay-button1 {
+    width: 13%;
+    position: absolute; 
+    bottom: 20px; 
+    right: 650px; 
+    padding: 10px 20px;
+    background-color: #C2F1C8;
+    color: rgb(0, 0, 0);
+    border-color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 footer {
     background-color: #2F2F89;
     color: white;
@@ -315,6 +329,11 @@ footer {
     width: 100%;
     right: 0px; 
     display: flex;
+}
+
+.saldo-info {
+    width: 100%;
+    margin-top: -81px; 
 }
 
 .product-image {
@@ -336,6 +355,24 @@ footer {
     padding: 25px;            
     margin: 40px;   
     pointer-events: all; 
+    margin-top: 5px;
+}
+
+.saldo-b {
+    flex-grow: 1; 
+    margin-left: 100px;
+    border: 2px solid #000000;
+    padding: 25px;            
+    margin: 40px;   
+    pointer-events: all; 
+    padding-bottom: 10px; 
+
+}
+
+.saldo-b h1 {
+    margin-top: 0px; 
+    margin-bottom: 5px;
+    font-size: 24px;
 }
 
 .product-price {
@@ -395,3 +432,141 @@ footer {
     color: rgb(0, 0, 0); 
     font-weight: bold;
 }
+
+.btn-historial{
+    border: none;
+    font-size: 25px; 
+    cursor: pointer;
+    width: 100px; 
+    height: 50px;
+    background: none;
+    margin-left: 34px;
+
+}
+
+.btn-historial img {
+    width: 400px; 
+    height: auto; 
+}
+
+.btn-historial:hover img {
+    opacity: 0.8;
+}
+
+.btn-aumento{
+    border: none;
+    font-size: 25px; 
+    cursor: pointer;
+    width: 100px; 
+    height: 50px;
+    background: none;
+    margin-left: 433px;
+    margin-top: 15px;
+}
+
+.btn-aumento img {
+    width: 400px; 
+    height: auto; 
+
+}
+
+.btn-aumento:hover img {
+    opacity: 0.8;
+}
+
+.compr-list {
+    list-style-type: none;
+    padding: 0 0 200px 0; 
+    margin: 0;
+    border-top: 2px solid black;  
+    border-left: 2px solid black; 
+    border-right: 2px solid black;  
+    border-bottom: 2px solid black;  
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+.compr-item {
+    background: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid black;  
+}
+
+.compr-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #000000;
+
+}
+
+.compr-info p {
+    margin: 5px 0;
+    color: #000000;
+}
+
+.compr-info hr {
+    margin-top: 10px;
+    border: 0;
+}
+
+.compr-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    min-width: 120px; 
+}
+
+.venc-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ad0000;
+    text-align: center;
+    min-width: 650px; 
+}
+
+.venc-price1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #001c95;
+    text-align: center;
+    min-width: 650px; 
+}
+
+.venc-price2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    min-width: 350px; 
+    line-height: 1;
+    padding: 0; 
+}
+
+.venc-row p,
+.venc-row div {
+    margin: 12px; 
+    padding: 0; 
+}
+
+.compr-row {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.venc-row {
+    font-size: 22px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#fecha-real {
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 50px; 
+    margin-top: 20px;
+}
+

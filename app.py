@@ -24,12 +24,13 @@ def login():
     usuario = request.form.get('usuario')
     contrasena = request.form.get('contrasena')
 
-    if usuario == "admin" and contrasena == "1234":  # Cambia esto según tus credenciales
-        return redirect(url_for('index'))  # Redirige a index.html si las credenciales son correctas
+    if usuario == "admin" and contrasena == "1234":  
+        return redirect(url_for('index')) 
     else:
         flash("Usuario o contraseña incorrectos.", "error")
-        return redirect(url_for('iniciarsesion'))  # Redirige de nuevo a IniciarSesion.html
-@app.route('/saldo.html')
+        return redirect(url_for('iniciarsesion')) 
+    
+@app.route('/saldo')
 def saldo():
     return render_template('saldo.html')
 
@@ -37,6 +38,23 @@ def saldo():
 @app.route('/Form1')
 def form1():
     return render_template('Form1.html') 
+
+@app.route('/HistorialCompras')
+def EstadoCuenta():
+    return render_template('EstadoCuenta.html') 
+
+@app.route('/aumento')
+def aumento():
+    return render_template('aumento.html') 
+
+@app.route('/HistorialCompras')
+def historial_compras():
+    compras = [
+        {'nombre': 'Producto 1', 'cantidad': 2, 'precio': 150.00, 'fecha': '2024-11-01'},
+        {'nombre': 'Producto 2', 'cantidad': 1, 'precio': 300.00, 'fecha': '2024-11-10'},
+        {'nombre': 'Producto 3', 'cantidad': 3, 'precio': 75.00, 'fecha': '2024-11-15'},
+    ]
+    return render_template('historial.html', compras=compras)
 
 if __name__ == "__main__":
     app.run(debug=True)

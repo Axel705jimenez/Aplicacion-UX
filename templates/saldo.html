@@ -10,18 +10,21 @@
     <header>
         <div class="header-content">
             <div class="user-cart">
-                <button id="regresar-btn" class="regresar-btn" onclick="window.location.href='/index';">
+                <button id="regresar-btn" class="regresar-btn" onclick="window.location.href='/Form1';">
                     <i class="bi bi-chevron-left"></i>
                 </button>
             </div>
             <span class="user-icon" id="user-icon">👤 Usuario</span>
+            <a href="/Carrito">
+                <div class="cart-icon">🛒</div>
+            </a>
             <div class="dropdown-menu" id="dropdown-menu">
                 <ul>
-                    <li>Mi cuenta</li>
+                    <li><a href="/Form1" class="menu-link1">Mi cuenta</a></li>                
                     <li>Cerrar sesión</li>
                 </ul>
             </div>
-        </div>
+           
     </header>
 
     <aside id="sidebar" class="sidebar collapsed">
@@ -37,23 +40,62 @@
         <div class="cart-container">
             <div class="cart-left">
                 <br>
+                <div id="fecha-real"></div>
                 <br>
                 <center>
-                    <h1>Detalleses</h1>
+                    <h1>Detalles</h1>
                 </center>
                 <ul class="product-list">
                     <li class="product-item">
                         <div class="product-info">
                             <div class="product-b">
-                                
+                                <div>Crédito disponible</div>
+                                <br>
+                                <div class="cant">$1,500</div>
+                                <br>
+                                <label>Crédito total: </label>
+                                <label class="canto">$3,000</label>
                             </div>
-
+                            
                         </div>
+                        <div class="saldo-info">
+                            <div class="saldo-b">
+                                <center>
+                                    <h1>Saldos</h1>
+                                </center>
+                                <div class="venc-row">
+                                    <p>Pagos vencidos</p>
+                                    <div class="venc-price">$500</div>
+                                </div>
+                                <div class="venc-row">
+                                    <p>Próximo pago</p>
+                                    <div class="venc-price1">$200</div>
+                                </div>
+                                <div class="venc-row">
+                                    <p>Deuda total actual</p>
+                                    <div class="venc-price2">$700</div>
+                                </div>
+                                <div class="venc-row">
+                                    <p>Fecha de corte</p>
+                                    <div class="venc-price2">15 de noviembre, 2024</div>
+                                </div>
+                                <div class="venc-row">
+                                    <p>Fecha limite de pago</p>
+                                    <div class="venc-price2">30 de noviembre, 2024</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
                     </li>
                 </ul>
+
             </div>
+
         </div>
+
     </div>
+    <button class="pay-button1">Realizar pago</button>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

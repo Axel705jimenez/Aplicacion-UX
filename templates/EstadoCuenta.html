@@ -10,18 +10,21 @@
     <header>
         <div class="header-content">
             <div class="user-cart">
-                <button id="regresar-btn" class="regresar-btn" onclick="window.location.href='/index';">
+                <button id="regresar-btn" class="regresar-btn" onclick="window.location.href='/Form1';">
                     <i class="bi bi-chevron-left"></i>
                 </button>
             </div>
             <span class="user-icon" id="user-icon">👤 Usuario</span>
+            <a href="/Carrito">
+                <div class="cart-icon">🛒</div>
+            </a>
             <div class="dropdown-menu" id="dropdown-menu">
                 <ul>
-                    <li>Mi cuenta</li>
+                    <li><a href="/Form1" class="menu-link1">Mi cuenta</a></li>                
                     <li>Cerrar sesión</li>
                 </ul>
             </div>
-        </div>
+           
     </header>
 
     <aside id="sidebar" class="sidebar collapsed">
@@ -39,21 +42,29 @@
                 <br>
                 <br>
                 <center>
-                    <h1>Detalles de la cuenta</h1>
+                    <h1>Historial de compras</h1>
                 </center>
-                <ul class="product-list">
-                    <li class="product-item">
-                        <div class="product-info">
-                            <div class="product-b">
-                                <div>Crédito disponible</div>
-                                <br>
-                                <div class="cant">$1,500</div>
-                                <br>
-                                <label>Crédito total: </label>
-                                <label class="canto">$3,000</label>
+                <ul class="compr-list">
+                    <li class="compr-item">
+                        <div class="compr-info">
+                            <h3>Smartphone XYZ</h3>
+                            <p>Cantidad: 1</p>
+                            <div class="compr-row">
+                                <p>Fecha de compra: 2024-11-01</p>
+                                <div class="compr-price">$150.00</div>
                             </div>
-                            <div class="overlay"></div>
-
+                            <hr>
+                        </div>
+                    </li>
+                        <li class="compr-item">
+                        <div class="compr-info">
+                            <h3>Producto: Smartphone XYZ</h3>
+                            <p>Cantidad: 1</p>
+                            <div class="compr-row">
+                                <p>Fecha de compra: 2024-11-01</p>
+                                <div class="compr-price">$150.00</div>
+                            </div>
+                            <hr>
                         </div>
                     </li>
                 </ul>
