@@ -102,6 +102,17 @@ body {
     z-index: 0;
 }
 
+.login-background1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 395px;
+    height: 600px;
+    background-color: #F0F0F0;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
 header {
     width: 100%;
     background-color: #2F2F89;
@@ -314,6 +325,21 @@ html, body {
     margin-top: 10px;
     font-size: 15px;
 }
+
+.pay-button2 {
+    width: 13%;
+    position: absolute; 
+    bottom: 110px; 
+    right: 650px; 
+    padding: 10px 20px;
+    background-color: #1cd234;
+    color: rgb(255, 255, 255);
+    border-color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 
 footer {
     background-color: #2F2F89;
@@ -570,3 +596,41 @@ footer {
     margin-top: 20px;
 }
 
+.form-ca {
+    background-color: #ECEDED;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 100px;
+    width: 500px;
+    text-align: left;
+    margin-left: 200px;
+    margin-top: 70px; 
+    font-size: 18px;
+}
+
+
+
+
+.form-ca h2 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #000000;
+    margin-top: 0px;
+    text-align: center;
+}
+
+
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #E0E0E0;
+    background-color: #E0E0E0;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}

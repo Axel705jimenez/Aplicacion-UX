@@ -15,9 +15,12 @@
                 </button>
             </div>
             <span class="user-icon" id="user-icon">👤 Usuario</span>
+            <a href="/Carrito">
+                <div class="cart-icon">🛒</div>
+            </a>
             <div class="dropdown-menu" id="dropdown-menu">
                 <ul>
-                    <li>Mi cuenta</li>
+                    <li><a href="/Form1" class="menu-link1">Mi cuenta</a></li>                
                     <li>Cerrar sesión</li>
                 </ul>
             </div>
@@ -34,24 +37,20 @@
     </aside>
 
     <div class="main-content">
-        <div class="cart-container">
-            <div class="cart-left">
-                <br>
-                <br>
-                <center>
-                    <h1>Solicitar aumento</h1>
-                </center>
-                <ul class="product-list">
-                    <li class="product-item">
-                        <div class="product-info">
-                            <div class="product-b">
-                               
-                            </div>
-
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <div class="form-ca">
+            <h2>Solicitud de Aumento de Crédito</h2>
+            <form action="/submit-aumento" method="POST">
+                <label for="monto">Monto Deseado</label>
+                <input type="number" id="monto" name="monto" required>
+                
+                <label for="ingreso">Ingreso Mensual</label>
+                <input type="number" id="ingreso" name="ingreso" required>
+                
+                <label for="motivo">Describa el motivo</label>
+                <textarea id="motivo" name="motivo" rows="4" required></textarea>
+                
+                <button class="pay-button2">Solicitar</button>
+            </form>
         </div>
     </div>
 

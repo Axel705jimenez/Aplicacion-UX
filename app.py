@@ -47,6 +47,10 @@ def EstadoCuenta():
 def aumento():
     return render_template('aumento.html') 
 
+@app.route('/registro')
+def registro():
+    return render_template('registro.html') 
+
 @app.route('/HistorialCompras')
 def historial_compras():
     compras = [

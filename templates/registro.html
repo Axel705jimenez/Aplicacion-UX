@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+    <div class="login-background1"></div>
+    <div class="login-container">
+        <h2>Registro de usuario</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="error-message">
+              {% for category, message in messages %}
+                {% if category == 'error' %}
+                  <p style="color: red;">{{ message }}</p>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <form id="registro-form" method="post" enctype="multipart/form-data">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required>
+            
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <label for="comprobante_domicilio">Adjuntar comprobante de domicilio (PDF)</label>
+            <input type="file" id="comprobante_domicilio" name="comprobante_domicilio" accept="application/pdf" required>
+
+            <label for="identificacion">Adjuntar identificación (PDF)</label>
+            <input type="file" id="identificacion" name="identificacion" accept="application/pdf" required>
+
+            <button type="submit" onclick="validarFormulario(event)">REGISTRAR</button>
+        </form>
+
+        <!-- Mensaje de confirmación oculto al principio -->
+        <div id="mensaje-confirmacion" style="display: none; color: green;">
+            Se enviará un correo de confirmación. Redirigiendo a la página principal...
+        </div>
+
+        <div class="crear-cuenta">
+            ¿Ya tienes cuenta?<br>
+            <a href="login.html">Iniciar sesión</a>
+        </div>
+    </div>
+
+    <script>
+        // Función para validar el formulario
+        function validarFormulario(event) {
+            event.preventDefault(); // Prevenir el envío inicial del formulario
+
+            // Obtener los valores de los campos
+            const usuario = document.getElementById("usuario").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const contrasena = document.getElementById("contrasena").value.trim();
+            const comprobanteDomicilio = document.getElementById("comprobante_domicilio").files.length;
+            const identificacion = document.getElementById("identificacion").files.length;
+
+            // Verificar si todos los campos están llenos
+            if (!usuario || !correo || !contrasena || comprobanteDomicilio === 0 || identificacion === 0) {
+                alert("Por favor, complete todos los campos antes de continuar.");
+                return; // Salir si hay campos vacíos
+            }
+
+            document.getElementById("mensaje-confirmacion").style.display = "block";
+
+            setTimeout(function() {
+                window.location.href = "/"; // Redirigir a "/"
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
