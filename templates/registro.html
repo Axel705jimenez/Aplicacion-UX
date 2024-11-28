@@ -54,27 +54,24 @@
     </div>
 
     <script>
-        // Función para validar el formulario
         function validarFormulario(event) {
-            event.preventDefault(); // Prevenir el envío inicial del formulario
+            event.preventDefault(); 
 
-            // Obtener los valores de los campos
             const usuario = document.getElementById("usuario").value.trim();
             const correo = document.getElementById("correo").value.trim();
             const contrasena = document.getElementById("contrasena").value.trim();
             const comprobanteDomicilio = document.getElementById("comprobante_domicilio").files.length;
             const identificacion = document.getElementById("identificacion").files.length;
 
-            // Verificar si todos los campos están llenos
             if (!usuario || !correo || !contrasena || comprobanteDomicilio === 0 || identificacion === 0) {
                 alert("Por favor, complete todos los campos antes de continuar.");
-                return; // Salir si hay campos vacíos
+                return;
             }
 
             document.getElementById("mensaje-confirmacion").style.display = "block";
 
             setTimeout(function() {
-                window.location.href = "/"; // Redirigir a "/"
+                window.location.href = "/"; 
             }, 3000);
         }
     </script>
