@@ -753,8 +753,57 @@ textarea {
         align-items: center;
         padding: 15px;
     }
+    .saldo-info{
+        text-align: left;
+        margin-left: -143px;
+        margin-right: 100px;
+        margin-top: -368px;;
+    }
 
-  
+    .saldo-b {
+        min-width: 0;
+        max-width: 46%; 
+        width: auto; 
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    
+    .venc-row{
+        font-size: 15px;
+        font-weight: bold;
+        margin-left: -10px;
+    }
+
+    .venc-price2{
+        font-size: 15px;
+        font-weight: bold;
+        color: #000000;
+        text-align: left;
+        min-width: 100px; 
+        line-height: 1;
+        padding: 0; 
+    }
+
+    .venc-price1{
+        font-size: 15px;
+        font-weight: bold;
+        color: #06086e;
+        text-align: left;
+        min-width: 100px; 
+        line-height: 1;
+        padding: 0; 
+    }
+
+    .venc-price{
+        font-size: 15px;
+        font-weight: bold;
+        color: #870e0e;
+        text-align: left;
+        min-width: 100px; 
+        line-height: 1;
+        padding: 0; 
+    }
     .product-details {
         text-align: justify;
         margin-top: -150px;
@@ -835,13 +884,45 @@ textarea {
     
     .product-b{
         text-align: left;
-        margin-left: 240px;
+        margin-left: 250px;
         margin-bottom: 300px;
         width: 350px;
         height: auto; 
     }
+
     .compr-list{
         margin-left: -20px;
         margin-right: -10px;
+    }
+
+    .dea{
+        text-align: left;
+    }
+
+    .fecha{
+        max-width: 46%;
+        margin-right: -10px;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
+    }
+    
+    .pay-button12 {
+        padding: 15px 30px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+    
+    .pay-button1:hover {
+        background-color: #0056b3;
     }
 }

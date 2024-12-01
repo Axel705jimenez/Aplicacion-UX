@@ -22,7 +22,7 @@
                 <div class="cart-icon">🛒</div>
             </a>
             <div class="dropdown-menu" id="dropdown-menu">
-                <ul>
+                <ul>+
                     <li><a href="/Form1" class="menu-link1">Mi cuenta</a></li>                
                     <li><a href="/logout" class="menu-link2" onclick="return confirmarCerrarSesion();">Cerrar sesión</a></li>
                 </ul>
@@ -43,28 +43,29 @@
         <div class="cart-container">
             <div class="cart-left">
                 <br>
-                <div id="fecha-real"></div>
+                <div class="fecha" id="fecha-real"></div>
                 <br>
-                <center>
-                    <h1>Detalles</h1>
-                </center>
-                
-                <div class="product-info">
-                    <div class="product-b">
-                        <div>Crédito disponible</div>
-                        <br>
-                        <div class="cant">$1,500</div>
-                        <br>
-                        <label>Crédito total: </label>
-                        <label class="canto">$3,000</label>
-                    </div>
-                </div>
+                    <h1 class="dea">Detalles</h1>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <div class="product-info">
+                                <div class="product-b">
+                                    <div>Crédito disponible</div>
+                                    <br>
+                                    <div class="cant">$1,500</div>
+                                    <br>
+                                    <label>Crédito total: </label>
+                                    <label class="canto">$3,000</label>
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
 
                 <div class="saldo-info">
                     <div class="saldo-b">
-                        <center>
-                            <h1>Saldos</h1>
-                        </center>
+                       
+                        <h1 class="dea">Saldos</h1>
                         <div class="venc-row">
                             <p>Pagos vencidos</p>
                             <div class="venc-price">$500</div>
@@ -91,7 +92,10 @@
         </div>
     </div>
 
-    <button class="pay-button1" id="pay-button">Realizar pago</button>
+    <div class="button-container12">
+        <button class="pay-button1">Realizar pago</button>
+    </div>
+    
 
     <div id="payment-modal" class="modal">
         <div class="modal-content">
