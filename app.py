@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  
+
 
 @app.route('/')
 def inicio():
@@ -43,13 +44,27 @@ def form1():
 def EstadoCuenta():
     return render_template('EstadoCuenta.html') 
 
-@app.route('/aumento')
+@app.route('/aumento', methods=['GET', 'POST'])
 def aumento():
-    return render_template('aumento.html') 
+    if request.method == 'POST':
+        monto = request.form.get('monto')
+        ingreso = request.form.get('ingreso')
+        motivo = request.form.get('motivo')
+        
+        flash("Se enviará un correo con la aprobación.", "info")
+        
+        return redirect(url_for('form1'))  
+    
+    return render_template('aumento.html')
 
 @app.route('/registro')
 def registro():
     return render_template('registro.html') 
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('iniciarsesion'))  
 
 @app.route('/HistorialCompras')
 def historial_compras():
@@ -61,4 +76,4 @@ def historial_compras():
     return render_template('historial.html', compras=compras)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')

@@ -65,6 +65,53 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     };
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("payment-modal");
+    const payButton = document.getElementById("pay-button");
+    const closeModal = document.getElementById("close-modal");
 
-    
-})    
+    payButton.addEventListener("click", function () {
+        modal.style.display = "block";
+    });
+
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+        window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+});    
+
+document.addEventListener("DOMContentLoaded", function () {
+    const aumentoForm = document.getElementById("aumento-form");
+
+    aumentoForm.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+
+        alert("Tu solicitud ha sido enviada. Recibirás un correo con el estado de tu solicitud.");
+
+        window.location.href = '/Form1';
+    });
+});
+
+function confirmarCerrarSesion() {
+    return confirm("¿Estás seguro de que deseas cerrar sesión?");
+}
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/static/service-worker.js')
+        .then(registration => {
+            console.log('Service Worker registrado con éxito:', registration.scope);
+        })
+        .catch(error => {
+            console.error('Error al registrar el Service Worker:', error);
+        });
+}
+
+document.getElementById('cart-icon').addEventListener('click', function() {
+    alert('¿Desea iniciar sesión para continuar?');
+});
